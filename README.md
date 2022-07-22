@@ -7,7 +7,7 @@ Angus Lau (angus.lau@sri.utoronto.ca)
 ## install
 
 ### Dependencies:
-* FSL (for applywarp)
+* FSL (for applywarp): https://fsl.fmrib.ox.ac.uk/fsl/fslwiki
 * matlab nii reader: https://github.com/xiangruili/dicm2nii
 
 ### matlab
