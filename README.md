@@ -2,6 +2,8 @@
 
 matlab implementation of Philips gradient nonlinearity correction
 
+Angus Lau (angus.lau@sri.utoronto.ca)
+
 ## install
 
 ### Dependencies:
