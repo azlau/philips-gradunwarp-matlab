@@ -31,4 +31,4 @@ nii_tool('save', filename_unwarped);
 
 ## Notes:
 
-The gradient spherical harmonic coefficients are taken from the Philips file `methpdf/src/mpghw_gr.res`. An example is shown for the MR-Linac gradient called `GCT_WA_MRL`. For a different scanner, find the appropriate gradient set and update the parameters in `src/config/gradient_config.m`. Alternatively, the coefficients can be extracted from the .sin header file.
+The gradient spherical harmonic coefficients are taken from the Philips file `methpdf/src/mpghw_gr.res`. An example is shown for the MR-Linac gradient called `GCT_WA_MRL`. For a different scanner, find the appropriate gradient set and update the parameters in `src/config/gradient_config.m`. Alternatively, the coefficients can be extracted from the header of the raw data file.
