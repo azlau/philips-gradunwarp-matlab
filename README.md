@@ -4,11 +4,12 @@ matlab implementation of Philips gradient nonlinearity correction
 
 ## install
 
-* Dependencies:
-    * FSL (for applywarp)
-    * matlab nii reader: https://github.com/xiangruili/dicm2nii
+### Dependencies:
+* FSL (for applywarp)
+* matlab nii reader: https://github.com/xiangruili/dicm2nii
 
-* matlab path: add `src` to path
+### matlab
+* add `src` to path
 
 ## usage
 
