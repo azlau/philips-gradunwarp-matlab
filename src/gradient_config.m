@@ -2,6 +2,14 @@ function config = gradient_config()
 % gradient_config dictionary for spherical
 % harmonic coefficient expansion of gradient sets
 
+% mapping of variable names:
+%          gx_ref_radius == PHW_geom_corr_gx_ref_radius 
+%          gy_ref_radius == PHW_geom_corr_gy_ref_radius 
+%          gz_ref_radius == PHW_geom_corr_gz_ref_radius 
+%          gx_field_c_coeffs == PHW_geom_corr_gx_field_c_coeffs 
+%          gy_field_s_coeffs == PHW_geom_corr_gy_field_s_coeffs 
+%          gz_field_c_coeffs == PHW_geom_corr_gz_field_c_coeffs 
+
 GCT_WA_MRL = struct();
 GCT_WA_MRL.gx_ref_radius = 225;
 GCT_WA_MRL.gy_ref_radius = 225;
