@@ -1,8 +1,10 @@
 # philips-gradunwarp-matlab
 
-matlab implementation of Philips gradient nonlinearity correction
+Matlab implementation of Philips gradient nonlinearity correction
 
 Angus Lau (angus.lau@sri.utoronto.ca)
+
+Please let me know if you see any bugs, thanks!
 
 ## install
 
