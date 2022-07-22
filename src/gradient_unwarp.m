@@ -1,15 +1,21 @@
-function out = gradient_unwarp(nii, config_name)
+function [out, nii_displacement] = gradient_unwarp(nii, config_name, warp_flag)
 % gradient_unwarp
 %
 % inputs:
 %   nii: nii structure
 %   config_name: gradient configuration
+%   warp_flag: default is false. take unwarped image and return warped version.
 %
 % outputs:
-%   nii: unwarped image structure
+%   out: unwarped image structure
+%   nii_displacement: displacement field, in FSL convention
     
-    if nargin < 2
+    if nargin < 2 | isempty(config_name)
         config_name = 'GCT_WA_MRL';
+    end
+
+    if nargin < 3 | isempty(warp_flag)
+        warp_flag = false;
     end
 
     temp_datadir = tempname;
@@ -22,6 +28,11 @@ function out = gradient_unwarp(nii, config_name)
     nii_tool('save', nii, temp_infile);
 
     nii_displacement = calc_unwarp_displacement(nii, config_name);
+
+    if warp_flag
+        nii_displacement.img = -nii_displacement.img;
+    end
+
     nii_tool('save', nii_displacement, temp_warpfile);
 
     cmd = ['applywarp -i ' temp_infile ' -r ' temp_infile ' -o ' temp_outfile ' -w ' temp_warpfile ' --interp=spline -v'];
