@@ -10,6 +10,9 @@ function config = gradient_config()
 %          gy_field_s_coeffs == PHW_geom_corr_gy_field_s_coeffs 
 %          gz_field_c_coeffs == PHW_geom_corr_gz_field_c_coeffs 
 
+% The gz coefficients are a vector of length n.
+% The gx and gy coefficients are a vector of length n*(n+1)/2.
+
 GCT_WA_MRL = struct();
 GCT_WA_MRL.gx_ref_radius = 225;
 GCT_WA_MRL.gy_ref_radius = 225;
